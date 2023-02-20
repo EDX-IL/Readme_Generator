@@ -43,11 +43,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+- Javascript
+- node.js
 
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
@@ -93,10 +90,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
   Your Name
-- Website - [your name or website url](https://www.your-site.com)
-- GitHub - [your GitHub username](https://github.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Repo - [README Generator](https://github.com/EDX-IL/Readme_Generator)
+- GitHub - [EDX-IL](https://github.com/EDX-IL)
 
 ## Acknowledgments
 
