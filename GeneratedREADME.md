@@ -1,10 +1,10 @@
 
 # Project Title 
-test
+Test
 
 ## Table Of Contents
-- [Description] (#description)
-- [Installation] (#installation)
+- [Description](#description)
+- [Installation](#installation)
 - [Usage]
 - [License]
 - [Contributors]
@@ -14,30 +14,30 @@ test
 - [Email]
 
 ## Description
-tset
+Test
 
 ## Installation
-test
+TEST
 
 ## Usage
-test
+TEst
 
 ## License
-[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]
+[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)]
 
 ## Contributors 
-me
+TEST
 
 ## Tests
-stuff
+TEST
 
 ## Questions
-q
+TEST
 
 ## Author
--- GitHub [EDX-IL](https://github.com/EDX-IL)
+- GitHub [EDX-IL](https://github.com/EDX-IL)
 
 ## Email
-ian@logendra.com
+- ian@logendra.com
 
 

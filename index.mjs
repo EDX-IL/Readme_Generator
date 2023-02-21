@@ -89,15 +89,15 @@ let readMeText = `
 ${title}
 
 ## Table Of Contents
-- [Description] (#description)
-- [Installation] (#installation)
-- [Usage]
-- [License]
-- [Contributors]
-- [Tests]
-- [Questions]
-- [Author]
-- [Email]
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributors](#contributors)
+- [Tests](#tests)
+- [Questions](#questions)
+- [Author](#author)
+- [Email](#email)
 
 ## Description
 ${description}
@@ -121,10 +121,10 @@ ${tests}
 ${questions}
 
 ## Author
--- GitHub [${username}](https://github.com/${username})
+- GitHub [${username}](https://github.com/${username})
 
 ## Email
-${email}
+- ${email}
 
 
 `;
