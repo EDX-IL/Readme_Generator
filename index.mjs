@@ -1,8 +1,19 @@
 import inquirer from "inquirer";
-import Inq from "inquirer";
 import fs from "fs/promises";
 
-let { title, description, tableOfContents, installation, usage, license, contributing, tests, questions, username, email } = await inquirer.prompt([
+let {
+  title,
+  description,
+//  tableOfContents,
+  installation,
+  usage,
+  license,
+  contributing,
+  tests,
+  questions,
+  username,
+  email,
+} = await inquirer.prompt([
   {
     type: "input",
     name: "title",
@@ -14,18 +25,17 @@ let { title, description, tableOfContents, installation, usage, license, contrib
     message: "Please provide a description for your project",
   },
 
-  {
-    type: "input",
-    name: "tableOfContents",
-    message: "Please enter your Table of Contents",
-  },
+//   {
+//     type: "input",
+//     name: "tableOfContents",
+//     message: "Please enter your Table of Contents",
+//   },
 
   {
     type: "input",
     name: "installation",
     message: "Please provide instructions on how to install your project",
   },
-
 
   {
     type: "input",
@@ -42,7 +52,6 @@ let { title, description, tableOfContents, installation, usage, license, contrib
       return val.toLowerCase();
     },
   },
-
 
   {
     type: "input",
@@ -62,38 +71,36 @@ let { title, description, tableOfContents, installation, usage, license, contrib
     message: "Please end your FAQs here",
   },
 
-  
-
-
   {
     type: "input",
     name: "username",
     message: "What is your github username",
   },
 
-  
   {
     type: "input",
     name: "email",
     message: "What is your email address",
   },
-
-  
-
-
-
-
 ]);
 
 let readMeText = `
 # Project Title 
 ${title}
 
+## Table Of Contents
+- [Description] (#description)
+- [Installation] (#installation)
+- [Usage]
+- [License]
+- [Contributors]
+- [Tests]
+- [Questions]
+- [Author]
+- [Email]
+
 ## Description
 ${description}
-
-## TableOfContents
-${tableOfContents}
 
 ## Installation
 ${installation}
@@ -104,7 +111,7 @@ ${usage}
 ## License
 ${generateLicense(license)}
 
-## Contributing 
+## Contributors 
 ${contributing}
 
 ## Tests
@@ -114,7 +121,7 @@ ${tests}
 ${questions}
 
 ## Author
-${username}
+-- GitHub [${username}](https://github.com/${username})
 
 ## Email
 ${email}
@@ -124,9 +131,7 @@ ${email}
 
 fs.writeFile("GeneratedREADME.md", readMeText);
 
-
 function generateLicense(license) {
-
   if (license === "boost") {
     return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]";
   }

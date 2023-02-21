@@ -14,13 +14,30 @@ README Generator
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
+
+Create a CLI command line interface professional readme.md generator from user prompted responses.
 
 ### The challenge
 
-Describe the challenge here
+* Create a command-line application that accepts user input.
+  * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
+    * The title of my project 
+    * Sections entitled:
+      * Description 
+      * Table of Contents 
+      * Installation 
+      * Usage 
+      * License 
+      * Contributing 
+      * Tests 
+      * Questions
+    * When a user enters the project title then it is displayed as the title of the README
+    * When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions then this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+    * When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled **License** that explains which license the application is covered under
+    * When a user enters their GitHub username then this is added to the section of the README entitled Questions, with a link to their GitHub profile
+    * When a user enters their email address then this is added to the section of the README entitled Questions, with instructions on how to reach them with additional questions
+    * When a user clicks on the links in the **Table of Contents** then they are taken to the corresponding section of the README
 
 ### Screenshot
 
@@ -36,10 +53,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [ReadMe Generator](git@github.com:EDX-IL/Readme_Generator.git)
 
 ## My process
+
+I started by creating the repository on github and cloning to my local machine. Then installed NMP Inquirer and set up the file structure and dependencies. 
+
+The then created the questions and deconstructed those responses to create a basic GeneratedREADME.md file.
+
+I then when through the markup documentation to improve each section so that it looked better. 
 
 ### Built with
 
@@ -47,54 +69,58 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - node.js
 
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Here I learned to deconstruct an asynchronous response achieved using the await function 
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+let {
+  title,
+  description,
+  tableOfContents,
+  installation,
+  usage,
+  license,
+  contributing,
+  tests,
+  questions,
+  username,
+  email,
+} = await inquirer.prompt
+
+
+```
+Here is learned how offer the user multiple choices
+
+```js
+{
+    type: "list",
+    name: "license",
+    message: "What license do you need?",
+    choices: ["Boost", "CCO", "IBM", "MIT"],
+    filter(val) {
+      return val.toLowerCase();
+    },
+  },
+
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+With more time i would create much more expansive formatting options including size and colour of headings and paragraphs
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Git Hub Licenses](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba) - This resource helped me find the links to the licenses to enter in my generated file
+- [NPM Inquirer Documentation](https://www.npmjs.com/package/inquirer) - This resource was invaluable in how to install and use command line interface features of NPM/Inquirer
+- [README.md Documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) - This provided invaluable information as to how to create the readme file. 
 
 ## Author
-  Your Name
+Ian Logendra
 - Repo - [README Generator](https://github.com/EDX-IL/Readme_Generator)
 - GitHub - [EDX-IL](https://github.com/EDX-IL)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Dane for his excellent video without which i could not even have done this much
