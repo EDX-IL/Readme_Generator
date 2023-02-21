@@ -1,43 +1,43 @@
 
 # Project Title 
-Test
+Readme Generator
 
 ## Table Of Contents
 - [Description](#description)
 - [Installation](#installation)
-- [Usage]
-- [License]
-- [Contributors]
-- [Tests]
-- [Questions]
-- [Author]
-- [Email]
+- [Usage](#usage)
+- [License](#license)
+- [Contributors](#contributors)
+- [Tests](#tests)
+- [Questions](#questions)
+- [Author](#author)
+- [Email](#email)
 
 ## Description
-Test
+This project creates a readme file
 
 ## Installation
-TEST
+Install using node and npm inquirer
 
 ## Usage
-TEst
+From terminal run node injex.mjs
 
 ## License
-[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributors 
-TEST
+Me
 
 ## Tests
-TEST
+Use this to create a professional readme.md file
 
 ## Questions
-TEST
+how much does this cost? It's FREE!
 
 ## Author
 - GitHub [EDX-IL](https://github.com/EDX-IL)
 
 ## Email
-- ian@logendra.com
+- edx@logendra.com
 
 
